@@ -1,0 +1,23 @@
+{
+  "name": "astroponic-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peckjj/astroponic-backend.git"
+  },
+  "author": "Joshua Peck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peckjj/astroponic-backend/issues"
+  },
+  "homepage": "https://github.com/peckjj/astroponic-backend#readme"
+}
