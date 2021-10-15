@@ -1,0 +1,29 @@
+h3, h1 {
+    color: white;
+    text-align: center;
+}
+
+.root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 80vh;
+}
+
+.left-main, .right-main {
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+    border-radius: 20px;
+    overflow-y: auto;
+}

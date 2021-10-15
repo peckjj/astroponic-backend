@@ -1,0 +1,11 @@
+<a [href]="card.link">
+    <div class="root">
+        <div class="image">
+            <img *ngIf="card.imagePath" [src]="card.imagePath">
+        </div>
+        <div class="content">
+            <h3>{{card.title}}</h3>
+            <p>{{card.desc}}</p>
+        </div>
+    </div>
+</a>

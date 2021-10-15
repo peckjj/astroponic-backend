@@ -9,6 +9,9 @@ import { HomeMainComponent } from './home/home-main/home-main.component';
 import { AboutMainComponent } from './about/about-main/about-main.component';
 import { ProjectsMainComponent } from './projects/projects-main/projects-main.component';
 import { ContactsMainComponent } from './contacts/contacts-main/contacts-main.component';
+import { HomeCardComponent } from './home/home-card/home-card.component';
+import { ProjectsMenuComponent } from './projects/projects-menu/projects-menu.component';
+import { AsciiTableComponent } from './projects/ascii-table/ascii-table.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ContactsMainComponent } from './contacts/contacts-main/contacts-main.co
     HomeMainComponent,
     AboutMainComponent,
     ProjectsMainComponent,
-    ContactsMainComponent
+    ContactsMainComponent,
+    HomeCardComponent,
+    ProjectsMenuComponent,
+    AsciiTableComponent
   ],
   imports: [
     BrowserModule,

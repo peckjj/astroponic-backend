@@ -1,1 +1,15 @@
-<p>home-main works!</p>
+<h1>Hi, welcome to the site.</h1>
+<div class="root">
+    <div class="content">
+        <h3>Quick Tools</h3>
+        <div class="left-main">
+            <app-home-card *ngFor="let card of leftCards" [card]="card"></app-home-card>
+        </div>
+    </div>
+    <div class="content">
+        <h3>Blog Posts</h3>
+        <div class="right-main">
+            <app-home-card *ngFor="let card of rightCards" [card]="card"></app-home-card>
+        </div>
+    </div>
+</div>
