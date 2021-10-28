@@ -1,1 +1,33 @@
-<h3>ASCII Table coming soon!</h3>
+<h3>CSV To ASCII Table Generator</h3>
+<div class="settings">
+    <div class="config">
+        <div class="input">
+            <label for="padding">Padding</label>
+            <input #padding name="padding" id="padding" value=0 min="0" type="number">
+        </div>
+        <div class="input">
+            <label for="delimiter">Delimiter</label>
+            <input #delimiter type="text" name="delimiter" id="delimiter" value=",">
+        </div>
+        <div class="input">
+            <label for="newLine">New Lines</label>
+        <div class="input-radio">
+            <label for="ignoreNewLine">Ignore</label>
+            <input #ignoreNewLine name="newLine" id="ignoreNewLine" type="radio" checked>
+            <label for="newLineAsDelim">Delimit</label>
+            <input #newLineAsDelim type="radio" name="newLine" id="newLineAsDelim">
+        </div>
+        </div>
+    </div>
+    <div class="text-data">
+        <label for="headers">Headers</label>
+        <textarea #headers [placeholder]="headersPlaceholder" rows="4" name="headers" id="headers" type="text"></textarea>
+        <label for="data">Data</label>
+        <textarea #data [placeholder]="dataPlaceholder" rows="4" name="data" id="data" type="text"></textarea>
+        <button (click)="generate()" id="generate">Generate</button>
+    </div>
+</div>
+<div class="output">
+<label for="out">Output</label>
+<textarea #output name="out" id="out"></textarea>
+</div>
