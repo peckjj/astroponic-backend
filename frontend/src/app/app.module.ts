@@ -12,6 +12,9 @@ import { ContactsMainComponent } from './contacts/contacts-main/contacts-main.co
 import { HomeCardComponent } from './home/home-card/home-card.component';
 import { ProjectsMenuComponent } from './projects/projects-menu/projects-menu.component';
 import { AsciiTableComponent } from './projects/ascii-table/ascii-table.component';
+import { ArtMainComponent } from './art/art-main/art-main.component';
+import { ArtMenuComponent } from './art/art-menu/art-menu.component';
+import { HieroglyphicsComponent } from './art/hieroglyphics/hieroglyphics.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { AsciiTableComponent } from './projects/ascii-table/ascii-table.componen
     ContactsMainComponent,
     HomeCardComponent,
     ProjectsMenuComponent,
-    AsciiTableComponent
+    AsciiTableComponent,
+    ArtMainComponent,
+    ArtMenuComponent,
+    HieroglyphicsComponent
   ],
   imports: [
     BrowserModule,

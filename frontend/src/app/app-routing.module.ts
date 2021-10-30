@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutMainComponent } from './about/about-main/about-main.component';
 import { AppComponent } from './app.component';
+import { ArtMainComponent } from './art/art-main/art-main.component';
+import { HieroglyphicsComponent } from './art/hieroglyphics/hieroglyphics.component';
 import { ContactsMainComponent } from './contacts/contacts-main/contacts-main.component';
 import { GitMainComponent } from './git/git-main/git-main.component';
 import { HomeMainComponent } from './home/home-main/home-main.component';
@@ -15,8 +17,10 @@ const routes: Routes = [
   {path: 'projects', component: ProjectsMainComponent},
   {path: 'contact', component: ContactsMainComponent},
   {path: 'projects', component: ProjectsMainComponent, children: [
-    {path: 'ascii-table', component: AsciiTableComponent},
-    {path: 'other', component: AsciiTableComponent}
+    {path: 'ascii-table', component: AsciiTableComponent}
+  ]},
+  {path: 'art', component: ArtMainComponent, children: [
+    {path: 'hieroglyphics', component: HieroglyphicsComponent}
   ]},
   {path: '**', redirectTo: 'home'}
 ];

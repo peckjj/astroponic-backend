@@ -1,0 +1,38 @@
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 92vh;
+    width: 100%;
+}
+
+.canvas {
+    width: 80%;
+    height: 100%;
+    background-color: blueviolet;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.to-bottom {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow-y: hidden;
+}
+
+app-art-menu {
+    width: 12%;
+}
