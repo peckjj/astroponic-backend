@@ -8,7 +8,7 @@ import * as p5 from 'p5';
 })
 export class HieroglyphicsComponent implements OnInit {
 
-  private p: any;
+  private canvas: any;
   private cDiv: HTMLElement | undefined;
 
   constructor() {
@@ -20,6 +20,8 @@ export class HieroglyphicsComponent implements OnInit {
 
   ngOnInit(): void {
     const sketch = (s: any) => {
+
+      this.canvas = s;
 
       s.resolution = 30;
       s.originalRes = s.resolution;
@@ -181,5 +183,9 @@ export class HieroglyphicsComponent implements OnInit {
    }
 
    let canvas = new p5(sketch, this.cDiv);
+  }
+
+  ngOnDestroy() {
+    this.canvas.remove();
   }
 }

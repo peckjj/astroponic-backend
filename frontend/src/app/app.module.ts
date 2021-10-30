@@ -15,6 +15,7 @@ import { AsciiTableComponent } from './projects/ascii-table/ascii-table.componen
 import { ArtMainComponent } from './art/art-main/art-main.component';
 import { ArtMenuComponent } from './art/art-menu/art-menu.component';
 import { HieroglyphicsComponent } from './art/hieroglyphics/hieroglyphics.component';
+import { ConnectFourComponent } from './art/connect-four/connect-four.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HieroglyphicsComponent } from './art/hieroglyphics/hieroglyphics.compon
     AsciiTableComponent,
     ArtMainComponent,
     ArtMenuComponent,
-    HieroglyphicsComponent
+    HieroglyphicsComponent,
+    ConnectFourComponent
   ],
   imports: [
     BrowserModule,

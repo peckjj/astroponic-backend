@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutMainComponent } from './about/about-main/about-main.component';
 import { AppComponent } from './app.component';
 import { ArtMainComponent } from './art/art-main/art-main.component';
+import { ConnectFourComponent } from './art/connect-four/connect-four.component';
 import { HieroglyphicsComponent } from './art/hieroglyphics/hieroglyphics.component';
 import { ContactsMainComponent } from './contacts/contacts-main/contacts-main.component';
 import { GitMainComponent } from './git/git-main/git-main.component';
@@ -20,7 +21,8 @@ const routes: Routes = [
     {path: 'ascii-table', component: AsciiTableComponent}
   ]},
   {path: 'art', component: ArtMainComponent, children: [
-    {path: 'hieroglyphics', component: HieroglyphicsComponent}
+    {path: 'hieroglyphics', component: HieroglyphicsComponent},
+    {path: 'connect-four', component: ConnectFourComponent}
   ]},
   {path: '**', redirectTo: 'home'}
 ];
