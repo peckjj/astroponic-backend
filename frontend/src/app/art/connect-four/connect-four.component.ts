@@ -62,7 +62,7 @@ export class ConnectFourComponent implements OnInit {
       s.turn = s.CPU_IS_FIRST;
 
       s.preload = () => {
-        s.boardImage = s.loadImage('https://raw.githubusercontent.com/peckjj/astroponic-backend/master/frontend/src/assets/board.png');
+        s.boardImage = s.loadImage('https://raw.githubusercontent.com/peckjj/astroponic-backend/master/frontend/images/board.png');
       };
 
       s.setup = () => {
