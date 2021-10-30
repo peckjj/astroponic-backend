@@ -25,6 +25,8 @@ export class HieroglyphicsComponent implements OnInit {
       s.originalRes = s.resolution;
       s.originalArea = 0;
       s.dots = null;
+      s.probability = .8;
+      s.disabledBoundaries = null;
 
       s.setup = (width: number, height: number) => {
          s.createCanvas(this.cDiv?.offsetWidth, this.cDiv?.offsetHeight, 'p2d');
@@ -44,13 +46,16 @@ export class HieroglyphicsComponent implements OnInit {
 
       s.createDots = () => {
         let dots = Array( Math.floor(s.width / s.resolution) );
+        s.disabledBoundaries = Array( Math.floor(s.width / s.resolution) );
         for (let i = 0; i < dots.length; i++) {
           dots[i] = Array( Math.floor(s.height / s.resolution) );
+          s.disabledBoundaries[i] = Array( Math.floor(s.height / s.resolution) );
         }
 
         for (let i = 0; i < dots.length; i++) {
           for (let j = 0; j < dots[i].length; j++) {
             dots[i][j] = Math.random();
+            s.disabledBoundaries[i][j] = Math.random() > s.probability;
           }
          }
 
@@ -84,6 +89,9 @@ export class HieroglyphicsComponent implements OnInit {
       };
 
       s.drawBoundary = (code: number, x: number, y: number) => {
+        if (s.disabledBoundaries[x][y]) {
+          return;
+        }
         s.stroke(255, 0, 0);
         switch (code) {
             case 0: // 0000
@@ -145,22 +153,22 @@ export class HieroglyphicsComponent implements OnInit {
             case 11: // 1011
                 // + +
                 // + .
-                // s.line(x * s.resolution + .5 * s.resolution, (y+1) * s.resolution, (x+1) * s.resolution, y * s.resolution + .5 * s.resolution);
+                s.line(x * s.resolution + .5 * s.resolution, (y+1) * s.resolution, (x+1) * s.resolution, y * s.resolution + .5 * s.resolution);
                 break;
             case 12: // 1100
                 // . .
                 // + +
-                // s.line(x * s.resolution, y * s.resolution + .5 * s.resolution, (x+1) * s.resolution, y * s.resolution + .5 * s.resolution);
+                s.line(x * s.resolution, y * s.resolution + .5 * s.resolution, (x+1) * s.resolution, y * s.resolution + .5 * s.resolution);
                 break;
             case 13: // 1101
                 // + .
                 // + +
-                // s.line(x * s.resolution + .5 * s.resolution, y * s.resolution, (x+1) * s.resolution, y * s.resolution + .5 * s.resolution);
+                s.line(x * s.resolution + .5 * s.resolution, y * s.resolution, (x+1) * s.resolution, y * s.resolution + .5 * s.resolution);
                 break;
             case 14: // 1110
                 // . +
                 // + +
-                // s.line(x * s.resolution + .5 * s.resolution, y * s.resolution, x * s.resolution, y * s.resolution + .5 * s.resolution );
+                s.line(x * s.resolution + .5 * s.resolution, y * s.resolution, x * s.resolution, y * s.resolution + .5 * s.resolution );
                 break;
             case 15: // 1111 Do nothing
                 // + +
